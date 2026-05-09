@@ -1,34 +1,26 @@
 #pragma once
 #include <string>
-using namespace std;
+#include <iostream>
 
-class Computer
-{
+class Computer {
 private:
-    string name;
-    double frequency;
-    int ram;
+    std::string name;
+    double frequency; 
+    int ram; 
     bool dvd;
     double price;
 
 public:
     Computer();
-    Computer(string n, double f, int r, bool d, double p);
+    Computer(std::string n, double f, int r, bool d, double p);
 
-    void setName(string n);
-    string getName() const;
-
-    void setFrequency(double f);
+    std::string getName() const;
     double getFrequency() const;
-
-    void setRAM(int r);
     int getRAM() const;
-
-    void setDVD(bool d);
-    bool getDVD() const;
+    bool hasDVD() const;
+    double getPrice() const;
 
     void setPrice(double p);
-    double getPrice() const;
 
     void print() const;
 };
